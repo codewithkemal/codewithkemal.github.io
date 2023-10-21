@@ -10,7 +10,7 @@
 
 .rounded-rectangle {
   border: 0px solid #000; /* Warna dan ketebalan border */
-  border-radius: 10px; /* Jari-jari border untuk membuat rectangle berbentuk bulat */
-  padding: 10px; /* Spasi internal untuk membuat rectangle terlihat lebih baik */
+  border-radius: 15px; /* Jari-jari border untuk membuat rectangle berbentuk bulat */
+  padding: 5px; /* Spasi internal untuk membuat rectangle terlihat lebih baik */
   margin-right: auto; /* Menambahkan renggang antara gambar dan teks */
 }
