@@ -1,0 +1,16 @@
+.nav-link {
+  margin-right: 10px; /* Menambahkan renggang di antara tombol */
+  color: #888; /* Warna teks awal (abu-abu) */
+  transition: color 0.2s; /* Animasi perubahan warna saat hover */
+}
+
+.nav-link:hover {
+  color: #000; /* Warna teks saat di-hover (hitam) */
+}
+
+.rounded-rectangle {
+  border: 0px solid #000; /* Warna dan ketebalan border */
+  border-radius: 10px; /* Jari-jari border untuk membuat rectangle berbentuk bulat */
+  padding: 10px; /* Spasi internal untuk membuat rectangle terlihat lebih baik */
+  margin-right: auto; /* Menambahkan renggang antara gambar dan teks */
+}
