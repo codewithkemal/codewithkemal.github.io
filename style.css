@@ -1,14 +1,12 @@
-/* Menjadikan teks navbar menjadi putih */
+/* Navbar */
 .navbar .navbar-nav .nav-link {
   color: white;
 }
 
-/* Mengubah warna teks pada link yang sedang aktif atau diklik */
 .navbar .navbar-nav .nav-link.active {
   color: white;
 }
 
-/* CSS untuk mengatur tampilan tombol navigasi */
 .nav-link {
   margin-right: 10px;
   color: #888;
@@ -19,20 +17,20 @@
   color: #ffffff;
 }
 
-/* CSS untuk mengatur tampilan gambar profil */
+/* Gambar Profil */
 .rounded-rectangle {
-  border: 0; /* Anda dapat menghapus border karena nilainya 0 */
+  border: 0;
   border-radius: 15px;
   padding: 5px;
   margin-right: auto;
 }
 
-/* Mengatur font keluarga untuk seluruh halaman */
+/* Font untuk seluruh halaman */
 body {
   font-family: "Manrope", sans-serif;
 }
 
-/* CSS untuk tombol Contact Me dan About */
+/* Tombol "Contact Me" dan "About" */
 .btn-white,
 .btn-gray {
   border: none;
@@ -57,19 +55,19 @@ body {
   transform: scale(1.1);
 }
 
-/* CSS untuk mengatur gambar di dalam container */
+/* Gambar di dalam container */
 .right-content img {
   max-width: 100%;
   height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Menyesuaikan posisi gambar ke tengah secara horizontal dan vertikal */
+  transform: translate(-50%, -50%);
 }
 
 .project-logo {
-  max-width: 200px; /* Atur ukuran logo sesuai kebutuhan */
-  height: auto; /* Jaga aspek ratio */
+  max-width: 200px;
+  height: auto;
 }
 
 .project-text {
@@ -80,10 +78,10 @@ body {
 
 .project-container img {
   max-width: 100%;
-  max-height: 200px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+  max-height: 200px;
 }
 
-/* CSS untuk footer */
+/* Footer */
 .footer {
   width: 100%;
   padding: 64px 104px;

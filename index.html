@@ -74,7 +74,7 @@
 <!-- Akhir About -->
 
 <!-- Halaman Experience -->
-<section id="Experience">
+<section id="Experience" style="margin-bottom: 20px;"> <!-- Tambahkan margin-bottom di sini -->
   <div class="container text-center">
     <div class="row">
       <div class="col">
@@ -113,7 +113,7 @@
 </section>
 <!-- Akhir Experience -->
 <!-- Halaman Projects -->
-<section id="Projects" class="bg-white text-black">
+<section id="Projects" class="bg-white text-black" style="margin-top: 80px;">
   <div class="container text-center">
     <div class="row">
       <div class="col">
@@ -127,7 +127,7 @@
             <div class="carousel-item active">
               <div class="project-container">
                 <img src="Logo BMHG.png" class="d-block mx-auto project-logo" alt="Project 1">
-                <p class="project-text">Recruiter, Interviewer & LO Final Recruitment Beasiswa Mahaghor 2023</p>
+                <p class="project-text">Recruiter, Interviewer & Liaison Officer Final Recruitment @Beasiswa Mahaghora 2023</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -159,47 +159,120 @@
 <!-- Akhir Projects -->
 <!-- Halaman Contact Us -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,96L60,101.3C120,107,240,117,360,122.7C480,128,600,128,720,144C840,160,960,192,1080,181.3C1200,171,1320,117,1380,90.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-<section id="Contact" class="bg-black text-white">
+<section id="Contact" class="bg-black text-white" style="margin-bottom: 0px;"> <!-- Tambahkan margin-bottom di sini -->
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h2><span style="font-size: 36px; font-weight: 700;">Contact Us</span></h2>
+        <h2><span style="font-size: 36px; font-weight: 700;">Contact Me</span></h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <form>
+        <form id="contactForm" novalidate>
           <div class="mb-3">
-            <input type="text" class="form-control" id="name" placeholder="Nama">
+            <input type="text" class="form-control" id="name" placeholder="Nama" required pattern="[A-Za-z\s]+" title="Nama tidak boleh mengandung angka">
+            <div class="invalid-feedback">
+              Harap isi nama (tanpa angka).
+            </div>
           </div>
           <div class="mb-3">
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <div class="invalid-feedback">
+              Harap isi alamat email yang valid.
+            </div>
           </div>
           <div class="mb-3">
-            <textarea class="form-control" id="message" rows="4" placeholder="Isi Pesan"></textarea>
+            <textarea class="form-control" id="message" rows="4" placeholder="Isi Pesan" required></textarea>
+            <div class="invalid-feedback">
+              Harap isi pesan.
+            </div>
           </div>
-          <button type="submit" class="btn btn-white">Kirim</button>
+          <button type="button" class="btn btn-white" id="submitBtn">Kirim</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal untuk Nama -->
+<div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nameModalLabel">Nama Tidak Valid</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Nama harus diisi tanpa angka.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal untuk Email -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailModalLabel">Email Tidak Valid</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Harap isi alamat email yang valid.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal untuk Pesan -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">Pesan Tidak Valid</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Pesan harus diisi.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal untuk Notifikasi Berhasil -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Pesan Berhasil Dikirim</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Pesan Anda telah berhasil dikirim.
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- Akhir Contact Us -->
 <!-- Halaman Footer -->
 <div class="footer">
   <div class="footer-content">
     <div class="logo">Made with ❣️ by Kemal</div>
-    <div class="copyright">........................</div>
+    <div class="copyright">© 2023 Thariq Kemal Hassan</div>
     <div class="links">
-      <div class="footer-link">Instagram</div>
-      <div class="footer-link">Linkedin</div>
-      <div class="footer-link">Medium</div>
-      <div class="footer-link">Behance</div>
+      <div class="footer-link"><a href="https://www.instagram.com/mal.kem.al" target="_blank" style="text-decoration: none; color: inherit;">Instagram</a></div>
+      <div class="footer-link"><a href="https://www.linkedin.com/in/thariqkemalhassan" target="_blank" style="text-decoration: none; color: inherit;">Linkedin</a></div>
+      <div class="footer-link"><a href="https://medium.com/@thariqkemalhassan" target="_blank" style="text-decoration: none; color: inherit;">Medium</a></div>
+      <div class="footer-link"><a href="https://www.behance.net/33thahassan" target="_blank" style="text-decoration: none; color: inherit;">Behance</a></div>
     </div>
   </div>
 </div>
 <!-- Akhir Footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
