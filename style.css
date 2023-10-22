@@ -1,3 +1,13 @@
+/* Menjadikan teks navbar menjadi putih */
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+
+/* Mengubah warna teks pada link yang sedang aktif atau diklik */
+.navbar .navbar-nav .nav-link.active {
+  color: white;
+}
+
 /* CSS untuk mengatur tampilan tombol navigasi */
 .nav-link {
   margin-right: 10px;
@@ -55,4 +65,65 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Menyesuaikan posisi gambar ke tengah secara horizontal dan vertikal */
+}
+
+.project-logo {
+  max-width: 200px; /* Atur ukuran logo sesuai kebutuhan */
+  height: auto; /* Jaga aspek ratio */
+}
+
+.project-text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.project-container img {
+  max-width: 100%;
+  max-height: 200px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+}
+
+/* CSS untuk footer */
+.footer {
+  width: 100%;
+  padding: 64px 104px;
+  background: #1a202c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  background: #2d3648;
+  padding: 12px 40px;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.footer-link {
+  text-align: center;
+  color: #a0abc0;
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  line-height: 21px;
 }
