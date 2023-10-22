@@ -1,97 +1,58 @@
-/* Mengatur tampilan tombol navigasi */
+/* CSS untuk mengatur tampilan tombol navigasi */
 .nav-link {
-  margin-right: 10px; /* Menambahkan renggang di antara tombol */
-  color: #888; /* Warna teks awal (abu-abu) */
-  transition: color 0.2s; /* Animasi perubahan warna saat hover */
+  margin-right: 10px;
+  color: #888;
+  transition: color 0.2s;
 }
 
-/* Mengubah warna teks tombol saat di-hover */
 .nav-link:hover {
-  color: #ffffff; /* Warna teks saat di-hover (hitam) */
+  color: #ffffff;
 }
 
-/* Mengatur tampilan gambar profil */
+/* CSS untuk mengatur tampilan gambar profil */
 .rounded-rectangle {
-  border: 0px solid #ffffff; /* Warna dan ketebalan border */
-  border-radius: 15px; /* Jari-jari border untuk membuat rectangle berbentuk bulat */
-  padding: 5px; /* Spasi internal untuk membuat rectangle terlihat lebih baik */
-  margin-right: auto; /* Menambahkan renggang antara gambar dan teks */
+  border: 0; /* Anda dapat menghapus border karena nilainya 0 */
+  border-radius: 15px;
+  padding: 5px;
+  margin-right: auto;
 }
 
-/* Menentukan latar belakang laman Overview */
+/* Mengatur font keluarga untuk seluruh halaman */
 body {
-  background-color: #000; /* Warna latar belakang hitam */
   font-family: "Manrope", sans-serif;
 }
 
-/* Menentukan latar belakang laman Overview dan menggunakan Flexbox untuk mengatur konten di tengah */
-.overview {
-  background-color: #000; /* Warna latar belakang hitam */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 70vh; /* Mengisi seluruh tinggi viewport */
-}
-
-.left-content {
-  color: #fff; /* Mengatur warna teks menjadi putih */
-  position: abs; /* Perubahan ini seharusnya menjadi position: absolute; */
-  z-index: 1; /* Mengatur z-index ke 1 untuk menampilkan teks di atas gambar */
-}
-
-.bold-text {
-  font-weight: bold;
-}
-
-/* Mengatur tombol Contact Us */
-.btn-white {
-  background-color: #fff; /* Warna latar belakang putih */
-  color: #000; /* Warna teks hitam */
-  border: none; /* Hapus border */
-  border-radius: 10px; /* Rounded rectangle dengan sudut lekuk */
-  padding: 10px 20px; /* Spasi dalam tombol */
-  margin: 5px; /* Spasi antara tombol */
-  transition: transform 0.2s; /* Animasi transform saat di-hover */
-}
-
-/* Mengatur tombol About */
+/* CSS untuk tombol Contact Me dan About */
+.btn-white,
 .btn-gray {
-  background-color: #888; /* Warna latar belakang abu-abu */
-  color: #fff; /* Warna teks putih */
-  border: none; /* Hapus border */
-  border-radius: 10px; /* Rounded rectangle dengan sudut lekuk */
-  padding: 10px 20px; /* Spasi dalam tombol */
-  margin: 5px; /* Spasi antara tombol */
-  transition: transform 0.2s; /* Animasi transform saat di-hover */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 5px;
+  transition: transform 0.2s;
 }
 
-/* Mengubah ukuran tombol saat di-hover */
+.btn-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-gray {
+  background-color: #888;
+  color: #fff;
+}
+
 .btn-white:hover,
 .btn-gray:hover {
-  transform: scale(1.1); /* Membesarkan tombol sebesar 10% saat di-hover */
+  transform: scale(1.1);
 }
 
 /* CSS untuk mengatur gambar di dalam container */
 .right-content img {
-  max-width: 100%; /* Membatasi lebar maksimum gambar agar sesuai dengan container */
-  height: auto; /* Menjaga aspek gambar agar tidak terdistorsi */
-  position: absolute; /* Mengatur posisi absolut untuk mengontrol koordinat */
-  top: 50%; /* Mengatur posisi vertikal ke tengah (vertically centered) */
-  left: 50%; /* Mengatur posisi horizontal ke tengah (horizontally centered) */
-  transform: translate(100px, -50%); /* Menggeser gambar ke tengah */
-}
-
-/* CSS untuk overlay gradient hitam di layar ponsel */
-@media (max-width: 767px) {
-  .overview::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, transparent, black); /* Menambahkan lapisan gradient hitam */
-    z-index: -1;
-  }
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Menyesuaikan posisi gambar ke tengah secara horizontal dan vertikal */
 }
